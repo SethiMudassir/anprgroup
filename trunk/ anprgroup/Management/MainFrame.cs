@@ -20,7 +20,6 @@ namespace WindowsFormsApplication1
         {
             Parking_Taking pt = new Parking_Taking();
             pt.Show();
-            button1.Name = "change4";
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -10,7 +10,7 @@ using System.Text;
 using System.IO;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
-
+using System.Configuration;
 namespace WindowsFormsApplication1
 {
     public partial class Parking_Taking : Form
@@ -153,28 +153,36 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            String strCardNumber;
-            strCardNumber = textBox3.Text;
-            String constring = "Data Source=DONGNT00292-PC\\SQLEXPRESS;Initial Catalog=PNR;Integrated Security=True";
-            String sqlStr = "select * from Mothly_Ticket where OwnerID Like " + strCardNumber;
-            SqlConnection con = new SqlConnection(constring);
-            con.Open();
-            SqlDataAdapter dataAdapt = new SqlDataAdapter(sqlStr, constring);
-            DataSet dataSet = new DataSet();
-            dataAdapt.Fill(dataSet, "Monthly_Ticket");
+            
+        }
 
-            if (dataSet.Tables["Monthly_Ticket"].Rows.Count == 1)
+        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                foreach (DataRow row in dataSet.Tables["Monthly_Ticket"].Rows)
+                String strCardNumber;
+                strCardNumber = textBox3.Text;
+                String constring = ConfigurationManager.ConnectionStrings["PNR"].ConnectionString;
+                String sqlStr = "select * from Mothly_Ticket where IDCard Like " + strCardNumber;
+                SqlConnection con = new SqlConnection(constring);
+                con.Open();
+                SqlDataAdapter dataAdapt = new SqlDataAdapter(sqlStr, constring);
+                DataSet dataSet = new DataSet();
+                dataAdapt.Fill(dataSet, "Monthly_Ticket");
+
+                if (dataSet.Tables["Monthly_Ticket"].Rows.Count == 1)
                 {
-                    label18.Text = "M" + textBox3.Text;
-                    label18.Visible = true;
-                    maskedTextBox9.Text = row["OwnerID"].ToString();
-                    maskedTextBox1.Text = row["Expire"].ToString();
-                    maskedTextBox6.Text = row["V_No1"].ToString();
-                    maskedTextBox4.Text = row["V_No2"].ToString();
-                    maskedTextBox7.Text = row["CustomerName"].ToString();
-                    maskedTextBox8.Text = dateTimePicker2.Text;
+                    foreach (DataRow row in dataSet.Tables["Monthly_Ticket"].Rows)
+                    {
+                        label18.Text = "M" + textBox3.Text;
+                        label18.Visible = true;
+                        maskedTextBox9.Text = row["IDCard"].ToString();
+                        maskedTextBox1.Text = row["Expire_Date"].ToString();
+                        maskedTextBox6.Text = row["V_No1"].ToString();
+                        maskedTextBox4.Text = row["V_No2"].ToString();
+                        maskedTextBox7.Text = row["CustomerName"].ToString();
+                        maskedTextBox8.Text = dateTimePicker2.Text;
+                    }
                 }
             }
         }

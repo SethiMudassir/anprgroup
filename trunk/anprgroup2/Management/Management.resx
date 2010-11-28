@@ -141,29 +141,6 @@
         W9EVgagN1LV1Wo9SalMNXDCqAFt4MHC+bdn0M//Z
 </value>
   </data>
-  <data name="Report.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBggGBQkIBwgKCQkKDRYODQwMDRoTFBAWHxwhIB8cHh4j
-        JzIqIyUvJR4eKzssLzM1ODg4ISo9QTw2QTI3ODX/2wBDAQkKCg0LDRkODhk1JB4kNTU1NS80NTU1LDQ1
-        NTU1NTQsNTU1NTU0LDUsNDUsNC8sKi80NCwsKSksNDMpNDYpKjT/wAARCAAwADADASIAAhEBAxEB/8QA
-        GwAAAgMAAwAAAAAAAAAAAAAABQYBAwQAAgf/xAA3EAABAwIEAwQHBwUAAAAAAAABAgMEBREAEiExBhNB
-        FCJRYRUjJIKhs9ElUnF0lNLwMkNidYH/xAAXAQEBAQEAAAAAAAAAAAAAAAADBAIB/8QAHxEAAgICAgMB
-        AAAAAAAAAAAAAAECESExA6ETQZES/9oADAMBAAIRAxEAPwD2F6v09hxSHHyFIUUq9Ws2I0PTA1fEtH57
-        ypEx8ArGTKl4C2UdAPG+KPSMyFHmOxQzykzXw6txJVk1FjoRYb3PTTpcgdUOO32GksoYQ3LSbLzoUsLN
-        7AISDckkjT/mt74Dy1t9AS5UtsNwq9Q6jObiRZklb7t8iSX03sCTqbDYHBbsDX35H6hz92FPtM13iHhd
-        dRZQ3LUqSVtNHRPqzYane1r6nW+pw39oOcp5DhIAJF0/XywsJSlYkXezBUYgb7OGn5TZW7lKhIWSO6o9
-        SRuBiabV+bIMGYUoloF0kaJeT95PwuOhPgQTFSUzOgL7RGk8pslRW2tKSkpuDqFX8cLvENAi0xMGZHdl
-        l5E+OlJXJWoAKcCTpe2oJH4E4oUU1TON07RNqrLgVNik9mBVUpCXVPPKbITfZJCVb/zyXJPC3EUSIcjT
-        b7rZ9mVFl+sb8ipYToNbHU9NRh3c4LaVIkOs1aqxhIdU8pDLyUpClG5sMuMC+ECUzCa/XByFWTaUnXuJ
-        Vr3fE4hfE5euwp8X62A6OuqJrfDDNajPNykOyx3pCXFODlXzZgdNSRYm9k4eifa3B2eUbISbB6x3V/lh
-        eZ4RagVqDOcmVuY4wtYbTJktqHeQoG1rEaeY2wUU4j0gtJZlElCQECWAu4zE/wBy+xHxxVwwcU7NLBVI
-        JNJlHs8zQPd7n90aq3GfW3XQ388V8ZL+zYn+wjfNTjiWmJEd2KhUlDzzS3m+Y8rKUqJsbBRHUXvvjPxg
-        59nRPz8f5gxVWfpy8DjgY5mWKmhAupS7AefKRgngJMfmQ58jk02RJQ6sLC21It/QkdTfcHE0NjS0VyUL
-        W40UxZtkLur2gbZSNO/4kfHA6ZJUAGkRJp5cxD11NqXokAHXW+34Y1rqdS6UKafeb/djOup1Tpw/OPvN
-        /XFEWgWjNElr9LRlqjSkJTFEclTCgM1wb7bab46cXLvT4n56P8wYtXUqv04cnH32/rgbVRWas3HZ9ATW
-        AiS06VqKCAEqBOxvthbjuzGdH//Z
-</value>
-  </data>
   <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -237,27 +214,6 @@
         W40UxZtkLur2gbZSNO/4kfHA6ZJUAGkRJp5cxD11NqXokAHXW+34Y1rqdS6UKafeb/djOup1Tpw/OPvN
         /XFEWgWjNElr9LRlqjSkJTFEclTCgM1wb7bab46cXLvT4n56P8wYtXUqv04cnH32/rgbVRWas3HZ9ATW
         AiS06VqKCAEqBOxvthbjuzGdH//Z
-</value>
-  </data>
-  <data name="button8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8k
-        KDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3
-        Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAAoACgDASIAAhEBAxEB/8QA
-        GQAAAgMBAAAAAAAAAAAAAAAAAAQCAwYF/8QAKhAAAgIBBAEDAwQDAAAAAAAAAQIDEQQABRIhMRMiQQZC
-        YRQjMlFigdH/xAAZAQACAwEAAAAAAAAAAAAAAAABAwIEBQD/xAAhEQEAAwEAAQQDAQAAAAAAAAABAAID
-        ESEEEhMxQaGx8P/aAAwDAQACEQMRAD8A2uk4pJpKLZmNEXEzqhjjsLG0g+6dSbEZ740L89EhzXI2ret2
-        yN7+oNnecomPuYhxIoYlT0o5DMvI8CpK20ZLGzZH3EHWJ6DOl7PvOw55N62sfiMiaVpMVFz8UnJrh7Ie
-        rYr8ZFnsfbf9ebGjatwGZt8GRLwjeT21fRb8f81dE2FuG3PkTz/r8VolWBQzsJLZqcB2YhiW4dmxxq17
-        VY7ns0OzfReUEcvkXGOZN8AZUPFTQ68Werr8AB+2eGlvjoce/cLih1jWjUYiTEhPkqNGsuxxSJktZndt
-        khn3lc45ubtmY7CNNwwiAApAFyDktUOiwPagWL7OiyJ48aFpZm4otfBJJPQAA7JJoADsk1pWTccCSBhJ
-        KODR8uLIbYcuJABFlg1KV8gkAiyNP9Nr8dup0jsb6ZvupMr9K442XCGLkZg5NkRTvbftAhwGEbeDQrmw
-        6YqtdIGbVyZE29kepyTbVIKxno5BHhm/x/of7PxVCz7TkxSYzcPTxizN6sZRRwNMQSACFPRI6F0fOrW3
-        bCSBJOUtNJ6QjXHkMgfiWooF5D2i+x4o/I03TcVaD3/fv+Ruumuq9PLHwKFAUNGldqzRuO242asbRieM
-        PwYH22PHYFj8/PnRqkj3zKqNXjJbhhQ7hhyYuStxvV9A0QQQaNg0QDRBB+QRpSLZYIoIoVmmAhB9EoEj
-        9NiSS4VVC33XYIqxXubkaNEshySNLBwZXibIgTJGc7TiY5CiO6VI5ZCzAUAbI43ZNEdEaZh2uKN4pHlm
-        lmScztI5W5H9Mx9gAD+JA6A8D82aNc2WF1u98y7bsRcDBgxEkkkSFAitJXLiPANADodePjRo0aH3IKr1
-        n//Z
 </value>
   </data>
   <data name="searchUserbt.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

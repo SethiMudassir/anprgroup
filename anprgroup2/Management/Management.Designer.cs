@@ -41,7 +41,6 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.User = new System.Windows.Forms.Button();
-            this.Report = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ticketbt = new System.Windows.Forms.Button();
@@ -50,13 +49,15 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.fullName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
             this.searchUserbt = new System.Windows.Forms.Button();
             this.editUserbt = new System.Windows.Forms.Button();
@@ -88,19 +89,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.fullName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -203,25 +193,11 @@
             this.User.Click += new System.EventHandler(this.button1_Click);
             this.User.MouseMove += new System.Windows.Forms.MouseEventHandler(this.User_MouseMove);
             // 
-            // Report
-            // 
-            this.Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Report.Image = ((System.Drawing.Image)(resources.GetObject("Report.Image")));
-            this.Report.Location = new System.Drawing.Point(260, 2);
-            this.Report.Name = "Report";
-            this.Report.Size = new System.Drawing.Size(100, 90);
-            this.Report.TabIndex = 3;
-            this.Report.Text = "Report";
-            this.Report.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Report.UseVisualStyleBackColor = true;
-            this.Report.Click += new System.EventHandler(this.button2_Click);
-            this.Report.MouseMove += new System.Windows.Forms.MouseEventHandler(this.User_MouseMove);
-            // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(366, 2);
+            this.button3.Location = new System.Drawing.Point(266, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(90, 90);
             this.button3.TabIndex = 4;
@@ -234,7 +210,6 @@
             // 
             this.panel1.Controls.Add(this.ticketbt);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.Report);
             this.panel1.Controls.Add(this.User);
             this.panel1.Location = new System.Drawing.Point(15, 29);
             this.panel1.Name = "panel1";
@@ -280,60 +255,6 @@
             this.columnHeader5.Text = "ID Number";
             this.columnHeader5.Width = 139;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Controls.Add(this.panel3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(823, 336);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Report";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox1.Location = new System.Drawing.Point(8, 77);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(795, 212);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Finance report";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(683, 150);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.button8);
-            this.panel3.Location = new System.Drawing.Point(-5, 11);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(248, 54);
-            this.panel3.TabIndex = 9;
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button8.Location = new System.Drawing.Point(28, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(137, 36);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Export to Excel";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.groupBox3);
@@ -358,6 +279,55 @@
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "User List";
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader18,
+            this.fullName,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11});
+            this.listView1.GridLines = true;
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.listView1.Location = new System.Drawing.Point(6, 20);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(802, 186);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "STT";
+            // 
+            // fullName
+            // 
+            this.fullName.Tag = "";
+            this.fullName.Text = "Full Name";
+            this.fullName.Width = 160;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "User Name";
+            this.columnHeader8.Width = 101;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Address";
+            this.columnHeader9.Width = 166;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Phone";
+            this.columnHeader10.Width = 98;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Email";
+            this.columnHeader11.Width = 216;
             // 
             // panel2
             // 
@@ -431,7 +401,6 @@
             // managementTab
             // 
             this.managementTab.Controls.Add(this.tabPage1);
-            this.managementTab.Controls.Add(this.tabPage2);
             this.managementTab.Controls.Add(this.tabPage3);
             this.managementTab.Controls.Add(this.tabPage4);
             this.managementTab.Location = new System.Drawing.Point(15, 135);
@@ -680,55 +649,6 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader18,
-            this.fullName,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11});
-            this.listView1.GridLines = true;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(6, 20);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(802, 186);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // fullName
-            // 
-            this.fullName.Tag = "";
-            this.fullName.Text = "Full Name";
-            this.fullName.Width = 160;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "User Name";
-            this.columnHeader8.Width = 101;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Address";
-            this.columnHeader9.Width = 166;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Phone";
-            this.columnHeader10.Width = 98;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Email";
-            this.columnHeader11.Width = 216;
-            // 
-            // columnHeader18
-            // 
-            this.columnHeader18.Text = "STT";
-            // 
             // Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -745,10 +665,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -776,7 +692,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button User;
-        private System.Windows.Forms.Button Report;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
@@ -785,11 +700,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Button ticketbt;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel panel2;

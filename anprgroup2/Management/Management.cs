@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace WindowsFormsApplication1
 {
@@ -31,7 +32,7 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             managementTab.TabPages.Clear();
-            managementTab.TabPages.Add(tabPage2);
+            
         }
 
       
@@ -101,7 +102,7 @@ namespace WindowsFormsApplication1
             managementTab.TabPages.Clear();
             managementTab.TabPages.Add(tabPage1);
 
-            String constring="Data Source=DONGNT00292-PC\\SQLEXPRESS;Initial Catalog=PNR;Integrated Security=True";
+            String constring=ConfigurationManager.ConnectionStrings["PNR"].ConnectionString;
             String sqlStr="select * from Staff";
             SqlConnection con = new SqlConnection(constring);
             con.Open();

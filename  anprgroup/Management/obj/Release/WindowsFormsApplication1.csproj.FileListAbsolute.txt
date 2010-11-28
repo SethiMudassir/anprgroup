@@ -1,8 +1,0 @@
-E:\Users\TrinhDTN00119\AppData\Local\Temporary Projects\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.exe
-E:\Users\TrinhDTN00119\AppData\Local\Temporary Projects\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.pdb
-E:\Users\TrinhDTN00119\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Release\ResolveAssemblyReference.cache
-E:\Users\TrinhDTN00119\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Form1.resources
-E:\Users\TrinhDTN00119\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Properties.Resources.resources
-E:\Users\TrinhDTN00119\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.csproj.GenerateResource.Cache
-E:\Users\TrinhDTN00119\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.exe
-E:\Users\TrinhDTN00119\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.pdb

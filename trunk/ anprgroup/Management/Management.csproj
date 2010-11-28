@@ -86,6 +86,12 @@
     <Compile Include="AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrameMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameMain.designer.cs">
+      <DependentUpon>FrameMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="sqlHelper.cs" />
     <Compile Include="EditUser.cs">
       <SubType>Form</SubType>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameMain.resx">
+      <DependentUpon>FrameMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management.resx">
       <DependentUpon>Management.cs</DependentUpon>
@@ -240,6 +249,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bgr1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\110x110.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\110x1101.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anpr_systems.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgr11.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help-copy-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_report.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ist2_7594085-car-parking-signs-icon-set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ist2_set.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\management_icon_1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_icon.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

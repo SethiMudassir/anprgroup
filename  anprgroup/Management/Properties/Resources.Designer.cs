@@ -60,9 +60,86 @@ namespace WindowsFormsApplication1.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _110x110 {
+            get {
+                object obj = ResourceManager.GetObject("110x110", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _110x1101 {
+            get {
+                object obj = ResourceManager.GetObject("110x1101", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap anpr_systems {
+            get {
+                object obj = ResourceManager.GetObject("anpr_systems", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap bgr1 {
             get {
                 object obj = ResourceManager.GetObject("bgr1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap bgr11 {
+            get {
+                object obj = ResourceManager.GetObject("bgr11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap help_copy_icon {
+            get {
+                object obj = ResourceManager.GetObject("help-copy-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap icon_report {
+            get {
+                object obj = ResourceManager.GetObject("icon_report", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Image1 {
+            get {
+                object obj = ResourceManager.GetObject("Image1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ist2_7594085_car_parking_signs_icon_set {
+            get {
+                object obj = ResourceManager.GetObject("ist2_7594085-car-parking-signs-icon-set", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ist2_set {
+            get {
+                object obj = ResourceManager.GetObject("ist2_set", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap management_icon_1 {
+            get {
+                object obj = ResourceManager.GetObject("management_icon_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap report_icon {
+            get {
+                object obj = ResourceManager.GetObject("report_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

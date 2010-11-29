@@ -40,16 +40,14 @@
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.User = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ticketbt = new System.Windows.Forms.Button();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchUserbt = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,7 +57,6 @@
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.searchUserbt = new System.Windows.Forms.Button();
             this.editUserbt = new System.Windows.Forms.Button();
             this.deleteUserbt = new System.Windows.Forms.Button();
             this.addUserbt = new System.Windows.Forms.Button();
@@ -89,8 +86,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.User = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.ticketbt = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -100,6 +100,7 @@
             this.panel4.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // managementToolStripMenuItem
@@ -174,61 +175,9 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(858, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(939, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // User
-            // 
-            this.User.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("User.BackgroundImage")));
-            this.User.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.User.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.User.Location = new System.Drawing.Point(12, 3);
-            this.User.Name = "User";
-            this.User.Size = new System.Drawing.Size(101, 90);
-            this.User.TabIndex = 2;
-            this.User.Text = "User";
-            this.User.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.User.UseVisualStyleBackColor = true;
-            this.User.Click += new System.EventHandler(this.button1_Click);
-            this.User.MouseMove += new System.Windows.Forms.MouseEventHandler(this.User_MouseMove);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(266, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 90);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Exit";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.ticketbt);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.User);
-            this.panel1.Location = new System.Drawing.Point(15, 29);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(503, 100);
-            this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // ticketbt
-            // 
-            this.ticketbt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ticketbt.Image = ((System.Drawing.Image)(resources.GetObject("ticketbt.Image")));
-            this.ticketbt.Location = new System.Drawing.Point(136, 2);
-            this.ticketbt.Name = "ticketbt";
-            this.ticketbt.Size = new System.Drawing.Size(100, 90);
-            this.ticketbt.TabIndex = 5;
-            this.ticketbt.Text = "Ticket";
-            this.ticketbt.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ticketbt.UseVisualStyleBackColor = true;
-            this.ticketbt.Click += new System.EventHandler(this.ticketbt_Click);
             // 
             // columnHeader1
             // 
@@ -257,25 +206,50 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.searchUserbt);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(823, 336);
+            this.tabPage1.Size = new System.Drawing.Size(904, 471);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "User";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(551, 18);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(148, 20);
+            this.textBox1.TabIndex = 13;
+            // 
+            // searchUserbt
+            // 
+            this.searchUserbt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchUserbt.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.searchUserbt.Image = ((System.Drawing.Image)(resources.GetObject("searchUserbt.Image")));
+            this.searchUserbt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.searchUserbt.Location = new System.Drawing.Point(705, 16);
+            this.searchUserbt.Name = "searchUserbt";
+            this.searchUserbt.Size = new System.Drawing.Size(99, 23);
+            this.searchUserbt.TabIndex = 10;
+            this.searchUserbt.Text = "Search User";
+            this.searchUserbt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.searchUserbt.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
+            this.groupBox3.AutoSize = true;
+            this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox3.Controls.Add(this.listView1);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox3.Location = new System.Drawing.Point(9, 74);
+            this.groupBox3.Location = new System.Drawing.Point(3, 45);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(795, 212);
+            this.groupBox3.Size = new System.Drawing.Size(901, 439);
             this.groupBox3.TabIndex = 12;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "User List";
@@ -289,12 +263,13 @@
             this.columnHeader9,
             this.columnHeader10,
             this.columnHeader11});
+            this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(6, 20);
+            this.listView1.Location = new System.Drawing.Point(4, 20);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(802, 186);
+            this.listView1.Size = new System.Drawing.Size(891, 399);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -302,12 +277,13 @@
             // columnHeader18
             // 
             this.columnHeader18.Text = "STT";
+            this.columnHeader18.Width = 36;
             // 
             // fullName
             // 
             this.fullName.Tag = "";
             this.fullName.Text = "Full Name";
-            this.fullName.Width = 160;
+            this.fullName.Width = 220;
             // 
             // columnHeader8
             // 
@@ -317,12 +293,12 @@
             // columnHeader9
             // 
             this.columnHeader9.Text = "Address";
-            this.columnHeader9.Width = 166;
+            this.columnHeader9.Width = 168;
             // 
             // columnHeader10
             // 
             this.columnHeader10.Text = "Phone";
-            this.columnHeader10.Width = 98;
+            this.columnHeader10.Width = 144;
             // 
             // columnHeader11
             // 
@@ -331,28 +307,13 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.searchUserbt);
             this.panel2.Controls.Add(this.editUserbt);
             this.panel2.Controls.Add(this.deleteUserbt);
             this.panel2.Controls.Add(this.addUserbt);
             this.panel2.Location = new System.Drawing.Point(-5, 10);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(438, 54);
+            this.panel2.Size = new System.Drawing.Size(321, 29);
             this.panel2.TabIndex = 8;
-            // 
-            // searchUserbt
-            // 
-            this.searchUserbt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchUserbt.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.searchUserbt.Image = ((System.Drawing.Image)(resources.GetObject("searchUserbt.Image")));
-            this.searchUserbt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.searchUserbt.Location = new System.Drawing.Point(325, 7);
-            this.searchUserbt.Name = "searchUserbt";
-            this.searchUserbt.Size = new System.Drawing.Size(99, 34);
-            this.searchUserbt.TabIndex = 10;
-            this.searchUserbt.Text = "Search User";
-            this.searchUserbt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.searchUserbt.UseVisualStyleBackColor = true;
             // 
             // editUserbt
             // 
@@ -362,7 +323,7 @@
             this.editUserbt.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.editUserbt.Location = new System.Drawing.Point(111, 6);
             this.editUserbt.Name = "editUserbt";
-            this.editUserbt.Size = new System.Drawing.Size(91, 36);
+            this.editUserbt.Size = new System.Drawing.Size(91, 23);
             this.editUserbt.TabIndex = 2;
             this.editUserbt.Text = "Edit User";
             this.editUserbt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -377,7 +338,7 @@
             this.deleteUserbt.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.deleteUserbt.Location = new System.Drawing.Point(208, 6);
             this.deleteUserbt.Name = "deleteUserbt";
-            this.deleteUserbt.Size = new System.Drawing.Size(102, 36);
+            this.deleteUserbt.Size = new System.Drawing.Size(96, 23);
             this.deleteUserbt.TabIndex = 1;
             this.deleteUserbt.Text = "Delete User";
             this.deleteUserbt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -391,7 +352,7 @@
             this.addUserbt.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.addUserbt.Location = new System.Drawing.Point(14, 6);
             this.addUserbt.Name = "addUserbt";
-            this.addUserbt.Size = new System.Drawing.Size(92, 36);
+            this.addUserbt.Size = new System.Drawing.Size(91, 23);
             this.addUserbt.TabIndex = 0;
             this.addUserbt.Text = "Add User";
             this.addUserbt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -403,10 +364,10 @@
             this.managementTab.Controls.Add(this.tabPage1);
             this.managementTab.Controls.Add(this.tabPage3);
             this.managementTab.Controls.Add(this.tabPage4);
-            this.managementTab.Location = new System.Drawing.Point(15, 135);
+            this.managementTab.Location = new System.Drawing.Point(15, 81);
             this.managementTab.Name = "managementTab";
             this.managementTab.SelectedIndex = 0;
-            this.managementTab.Size = new System.Drawing.Size(831, 362);
+            this.managementTab.Size = new System.Drawing.Size(912, 497);
             this.managementTab.TabIndex = 19;
             // 
             // tabPage3
@@ -416,7 +377,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(823, 336);
+            this.tabPage3.Size = new System.Drawing.Size(904, 471);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Monthly Ticket";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -558,7 +519,7 @@
             this.tabPage4.Controls.Add(this.panel5);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(823, 336);
+            this.tabPage4.Size = new System.Drawing.Size(904, 471);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Regular Ticket";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -649,23 +610,77 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // User
+            // 
+            this.User.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("User.BackgroundImage")));
+            this.User.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.User.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.User.Location = new System.Drawing.Point(12, 3);
+            this.User.Name = "User";
+            this.User.Size = new System.Drawing.Size(49, 59);
+            this.User.TabIndex = 2;
+            this.User.Text = "User";
+            this.User.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.User.UseVisualStyleBackColor = true;
+            this.User.Click += new System.EventHandler(this.button1_Click);
+            this.User.MouseMove += new System.Windows.Forms.MouseEventHandler(this.User_MouseMove);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(266, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(54, 59);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Exit";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // ticketbt
+            // 
+            this.ticketbt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketbt.Image = ((System.Drawing.Image)(resources.GetObject("ticketbt.Image")));
+            this.ticketbt.Location = new System.Drawing.Point(136, 2);
+            this.ticketbt.Name = "ticketbt";
+            this.ticketbt.Size = new System.Drawing.Size(49, 60);
+            this.ticketbt.TabIndex = 5;
+            this.ticketbt.Text = "Ticket";
+            this.ticketbt.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ticketbt.UseVisualStyleBackColor = true;
+            this.ticketbt.Click += new System.EventHandler(this.ticketbt_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.ticketbt);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.User);
+            this.panel1.Location = new System.Drawing.Point(15, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(338, 46);
+            this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 584);
+            this.ClientSize = new System.Drawing.Size(939, 579);
             this.Controls.Add(this.managementTab);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Management";
             this.Text = "Mangagement";
             this.Load += new System.EventHandler(this.Management_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.managementTab.ResumeLayout(false);
@@ -674,6 +689,7 @@
             this.panel4.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -691,17 +707,12 @@
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Button User;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.Button ticketbt;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button searchUserbt;
         private System.Windows.Forms.Button editUserbt;
@@ -733,13 +744,19 @@
         private System.Windows.Forms.ColumnHeader columnHeader15;
         private System.Windows.Forms.ColumnHeader columnHeader16;
         private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
         private System.Windows.Forms.ColumnHeader fullName;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.Button User;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ticketbt;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

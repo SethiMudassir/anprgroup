@@ -16,6 +16,15 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
+        // Login fuction
+
+        private DataTable rowgetLogin;
+        public void getDataLogin(DataTable rowlogin)
+        {
+            rowgetLogin = (DataTable)rowlogin;
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             new Parking_Taking().Show();
@@ -38,7 +47,11 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // report for dailly  
             new Report_dailly().Show();
+
+             //report for finance
+             //new Report_MonFinace().Show();
         }
 
         

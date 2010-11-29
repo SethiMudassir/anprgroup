@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.Configuration;
 
 namespace WindowsFormsApplication1
 {
@@ -25,19 +25,19 @@ namespace WindowsFormsApplication1
 
         public void CreatReport()
         {
-            string source = "Data Source=NGOCQT\\SQLEXPRESS;Initial Catalog=PNR;Integrated Security=True";
+            string source = ConfigurationManager.ConnectionStrings["PNR"].ConnectionString;
             SqlConnection conn = new SqlConnection(source);
 
             try
             {
                 conn.Open();
-                string query = "select Ticket_Type, V_No, V_Ticket, In_Time, Out_Time from V_detail";
+                string query = "select TicketType.TicketType, V_No, V_Ticket, In_Time, Out_Time from V_detail,TicketType where TicketType.IDTicket = V_detail.Ticket_Type ";
                 SqlDataAdapter myDataAdapter = new SqlDataAdapter(query, conn);
 
                 DataSet dataReport = new DataSet();
                 myDataAdapter.Fill(dataReport, "Table");
 
-                Report_MonFinance myDataReport = new Report_MonFinance();
+                ReportDailly myDataReport = new ReportDailly();
                 myDataReport.SetDataSource(dataReport);
                 crystalReportViewer1.ReportSource = myDataReport;
             }

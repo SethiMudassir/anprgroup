@@ -27,6 +27,8 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Anpr.Anprclass anpr = new Anpr.Anprclass();
+            anpr.Biensoxe();
             new Parking_Taking().Show();
         }
 

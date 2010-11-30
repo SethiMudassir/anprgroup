@@ -57,7 +57,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -243,7 +242,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1196, 686);
+            this.tabPage1.Size = new System.Drawing.Size(893, 686);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Paking";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -283,11 +282,9 @@
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(138, 20);
             this.maskedTextBox1.TabIndex = 25;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(237, 32);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(102, 114);
@@ -321,8 +318,6 @@
             this.maskedTextBox5.Name = "maskedTextBox5";
             this.maskedTextBox5.Size = new System.Drawing.Size(248, 20);
             this.maskedTextBox5.TabIndex = 21;
-            this.maskedTextBox5.Text = "FSoft, Cầu Giấy";
-            this.maskedTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // maskedTextBox6
             // 
@@ -350,9 +345,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(6, 194);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 13);
+            this.label9.Size = new System.Drawing.Size(59, 13);
             this.label9.TabIndex = 18;
-            this.label9.Text = "COMPANY";
+            this.label9.Text = "ADDRESS";
             // 
             // maskedTextBox7
             // 
@@ -361,7 +356,6 @@
             this.maskedTextBox7.Name = "maskedTextBox7";
             this.maskedTextBox7.Size = new System.Drawing.Size(140, 20);
             this.maskedTextBox7.TabIndex = 13;
-            this.maskedTextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label10
             // 
@@ -380,8 +374,6 @@
             this.maskedTextBox8.Name = "maskedTextBox8";
             this.maskedTextBox8.Size = new System.Drawing.Size(138, 20);
             this.maskedTextBox8.TabIndex = 10;
-            this.maskedTextBox8.Text = "01234632";
-            this.maskedTextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // maskedTextBox9
             // 
@@ -390,8 +382,6 @@
             this.maskedTextBox9.Name = "maskedTextBox9";
             this.maskedTextBox9.Size = new System.Drawing.Size(138, 20);
             this.maskedTextBox9.TabIndex = 8;
-            this.maskedTextBox9.Text = "0003";
-            this.maskedTextBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label11
             // 
@@ -436,31 +426,20 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.button1);
             this.groupBox8.Controls.Add(this.pictureBox1);
             this.groupBox8.Controls.Add(this.label3);
             this.groupBox8.Location = new System.Drawing.Point(372, 5);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(596, 636);
+            this.groupBox8.Size = new System.Drawing.Size(513, 496);
             this.groupBox8.TabIndex = 30;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Paking picture";
             this.groupBox8.Enter += new System.EventHandler(this.groupBox8_Enter);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(279, 399);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Browse";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(87, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 55);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(487, 304);
             this.pictureBox1.TabIndex = 3;
@@ -545,12 +524,12 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(231, 110);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(118, 29);
             this.dateTimePicker1.TabIndex = 23;
-            this.dateTimePicker1.Value = new System.DateTime(2010, 11, 17, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2010, 11, 29, 23, 59, 23, 0);
             // 
             // button4
             // 
@@ -594,7 +573,6 @@
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(107, 29);
             this.maskedTextBox3.TabIndex = 10;
-            this.maskedTextBox3.Text = "30K9-9454";
             this.maskedTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
@@ -783,7 +761,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1196, 686);
+            this.tabPage3.Size = new System.Drawing.Size(893, 686);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Search information";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1108,7 +1086,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1196, 686);
+            this.tabPage2.Size = new System.Drawing.Size(893, 686);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Taking";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1334,7 +1312,7 @@
             this.tabControl1.Location = new System.Drawing.Point(6, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1204, 712);
+            this.tabControl1.Size = new System.Drawing.Size(901, 712);
             this.tabControl1.TabIndex = 36;
             // 
             // label17
@@ -1360,11 +1338,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 723);
+            this.ClientSize = new System.Drawing.Size(906, 723);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label17);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(400, 0);
+            this.MaximizeBox = false;
             this.Name = "Parking_Taking";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Parking_Taking";
             this.Load += new System.EventHandler(this.Parking_Taking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -1509,7 +1490,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label2;

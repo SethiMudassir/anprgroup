@@ -11,13 +11,17 @@ using System.IO;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Configuration;
+using System.Xml;
+using System.Threading;
 namespace WindowsFormsApplication1
 {
     public partial class Parking_Taking : Form
     {
+        Thread th1;
         public Parking_Taking()
         {
             InitializeComponent();
+            tickerDelegate1 = new TickerDelegate(SetLeftTicker);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -32,8 +36,12 @@ namespace WindowsFormsApplication1
 
         private void Parking_Taking_Load(object sender, EventArgs e)
         {
-
+            
+            th1 = new Thread(new ThreadStart(check));
+            th1.IsBackground = true;
+            th1.Start();
         }
+            
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -141,9 +149,7 @@ namespace WindowsFormsApplication1
         }
 
         private void textBox3_Enter(object sender, EventArgs e)
-        {
-
-            
+        {    
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -187,8 +193,160 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Anpr.Anprclass anpr = new Anpr.Anprclass();
+            anpr.Biensoxe();
+            anpr.Dispose();
+            
+        }
 
-        
+        private void button5_Click(object sender, EventArgs e)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load("C:\\plate.xml");
+
+            XmlNodeList plateNumberNode = doc.GetElementsByTagName("plateNumber");
+
+            String plateNumber;
+            foreach (XmlNode plate in plateNumberNode)
+            {
+                plateNumber = plate.ChildNodes[0].Value.ToString();
+                maskedTextBox3.Text = plateNumber;
+            }
+            XmlNodeList pathFileNode = doc.GetElementsByTagName("pathFile");
+            String pathFile;
+            foreach (XmlNode path in pathFileNode)
+            {
+                pathFile = path.ChildNodes[0].Value.ToString();
+                pictureBox1.Image = FixedSize(Image.FromFile(pathFile), 487, 300);
+            }
+            
+        }
+
+        //----Thread Dong ho     
+        private delegate void TickerDelegate(string s);
+        TickerDelegate tickerDelegate1;
+        private void disp()
+        {
+            while (true)
+            {
+                Thread.Sleep(1000);
+            }
+        }
+        private void SetLeftTicker(string s)
+        {
+            this.Text = s;
+        }
+
+        //----Thread refresh
+        delegate void check_load_room_to_formMainCallback();
+        private void check_load_room_to_formMain()
+        {
+            if (this.pictureBox1.InvokeRequired)
+            {
+                check_load_room_to_formMainCallback d = new check_load_room_to_formMainCallback(check_load_room_to_formMain);
+                this.Invoke(d);
+            }
+            else
+            {
+                string pathFile;
+                string plateNumber;
+                Boolean flag = true;
+                while (flag)
+                {
+                    try
+                    {
+                        XmlDocument doc = new XmlDocument();
+                        doc.Load("C:\\plate.xml");
+                        XmlNodeList plateNumberNode = doc.GetElementsByTagName("plateNumber");
+
+                        if (plateNumberNode != null)
+                        {
+                            foreach (XmlNode plate in plateNumberNode)
+                            {
+
+                                if (plate.ChildNodes[0] == null)
+
+                                    flag = false;
+                                else
+                                {
+                                    plateNumber = plate.ChildNodes[0].Value.ToString();
+                                    maskedTextBox3.Text = plateNumber;
+                                    flag = false;
+                                }
+                            }
+
+                            // get path of file picture to load on Picture box
+                            XmlNodeList pathFileNode = doc.GetElementsByTagName("pathFile");
+                            if (pathFileNode != null)
+                            {
+                                foreach (XmlNode path in pathFileNode)
+                                {
+
+                                    if (path.ChildNodes[0] == null)
+
+                                        flag = false;
+                                    else
+                                    {
+                                        pathFile = path.ChildNodes[0].Value.ToString();
+                                        pictureBox1.Image = FixedSize(Image.FromFile(pathFile), 487, 300);
+                                        flag = false;
+                                        //th1.Abort();
+                                        
+                                        //doc.AppendChild(doc.CreateElement("","root_element",""));
+                                        //XmlNode plateNode = doc.CreateElement("plateNumber");
+                                        //plateNode.AppendChild(doc.CreateTextNode(""));
+                                        //XmlNode pathNode = doc.CreateElement("pathFile");
+                                        //pathNode.AppendChild(doc.CreateTextNode(""));
+                                        //doc.Save("C:\\plates.xml");
+                                    }
+                                }
+
+                                //Thread.Sleep(5000);
+                            }
+                        }
+                    
+                    }catch (Exception)
+                    {
+                        flag = true;
+                    }
+                    refreshXML();
+                    
+                }    
+            }
+        }
+        private void check()
+        {
+            while (true)
+            {
+                check_load_room_to_formMain();
+                Thread.Sleep(1000);
+            }
+        }
+
+        private void refreshXML()
+        {
+            XmlDocument xmlDom = new XmlDocument();
+            xmlDom.AppendChild(xmlDom.CreateElement("", "root_element", ""));
+            XmlElement xmlRoot = xmlDom.DocumentElement;
+            XmlElement xmlTitle, xmlAuthor, xmlPrice;
+            XmlText xmlText;
+
+            xmlTitle = xmlDom.CreateElement("", "plateNumber", "");
+            xmlText = xmlDom.CreateTextNode("");
+            xmlTitle.AppendChild(xmlText);
+            xmlRoot.AppendChild(xmlTitle);
+
+
+            xmlAuthor = xmlDom.CreateElement("", "pathFile", "");
+            xmlText = xmlDom.CreateTextNode("");
+            xmlAuthor.AppendChild(xmlText);
+            xmlRoot.AppendChild(xmlAuthor);
+
+            xmlDom.Save("C:\\plate.xml");
+            
+        }
 
 
     }

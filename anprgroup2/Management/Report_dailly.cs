@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1
 
                 ReportDailly myDataReport = new ReportDailly();
                 myDataReport.SetDataSource(dataReport);
-                crystalReportViewer1.ReportSource = myDataReport;
+                //crystalReportViewer1.ReportSource = myDataReport;
             }
             catch (SqlException ex) { MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 

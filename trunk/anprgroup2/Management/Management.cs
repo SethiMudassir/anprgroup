@@ -7,15 +7,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Configuration;
 
 namespace WindowsFormsApplication1
 {
     public partial class Management : Form
     {
-        DataTable dtRT;
-        int pos = 0;
-        int i = 1;
         public Management()
         {
             InitializeComponent();
@@ -35,7 +31,7 @@ namespace WindowsFormsApplication1
         private void button2_Click(object sender, EventArgs e)
         {
             managementTab.TabPages.Clear();
-            
+            managementTab.TabPages.Add(tabPage2);
         }
 
       
@@ -100,72 +96,44 @@ namespace WindowsFormsApplication1
 
         }
 
-        public void Management_Load(object sender, EventArgs e)
+        private void Management_Load(object sender, EventArgs e)
         {
-            try
+            managementTab.TabPages.Clear();
+            managementTab.TabPages.Add(tabPage1);
+
+            String constring="Data Source=DONGNT00292-PC\\SQLEXPRESS;Initial Catalog=PNR;Integrated Security=True";
+            String sqlStr="select * from Staff";
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            SqlDataAdapter dataAdapt = new SqlDataAdapter(sqlStr,constring);
+            DataSet dataSet = new DataSet();
+            dataAdapt.Fill(dataSet,"Staff");
+            listView1.Items.Clear();
+            int count = 0;
+            foreach(DataRow row in dataSet.Tables["Staff"].Rows)
             {
-                dtRT = sqlHelper.ExecuteQuery(
-                "list_User",
-                CommandType.StoredProcedure);
-                listView1.Items.Clear();
-                if (dtRT.Rows.Count > 0)
-                {                    
-                    foreach (DataRow row in dtRT.Rows)
-                    {
-                        ListViewItem item = new ListViewItem();
-                        item.Text = i.ToString();
-                        item.SubItems.Add(row["Full_Name"].ToString());
-                        item.SubItems.Add(row["UserName"].ToString());
-                        item.SubItems.Add(row["Address"].ToString());
-                        item.SubItems.Add(row["Phone"].ToString());
-                        item.SubItems.Add(row["Email"].ToString());
-                        listView1.Items.Add(item);
-                        i++;
-                    }
-                    listView1.Items[pos].Selected = true;
-                    //listView1_SelectedIndexChanged(listView1.Items[pos], System.EventArgs.Empty);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                ListViewItem item = new ListViewItem();
+                item.Text = (++count).ToString();
+                item.SubItems.Add(row["Full_Name"].ToString());
+                item.SubItems.Add(row["UserName"].ToString());
+                item.SubItems.Add(row["Address"].ToString());
+                item.SubItems.Add(row["Phone"].ToString());
+                item.SubItems.Add(row["Email"].ToString());
+
+                listView1.Items.Add(item);
             }
 
-                        
+            
         }
 
-        //update table after adding
-        public void updateTable(string a1,string a2, string a3,string a4,string a5)
-        {
-            ListViewItem item = new ListViewItem();
-            item.Text = i.ToString();
-            item.SubItems.Add(a1);
-            item.SubItems.Add(a2);
-            item.SubItems.Add(a3);
-            item.SubItems.Add(a4);
-            item.SubItems.Add(a5);
-            listView1.Items.Add(item);
-            i++;
-        }
-
-        //populate Addnew menu
         private void addUserbt_Click(object sender, EventArgs e)
         {
             new AddUser().Show();
         }
 
-        //populate Edit Menu
         private void editUserbt_Click(object sender, EventArgs e)
         {
-            //new EditUser().Show();
-            
-            ListViewItem item = new ListViewItem();
-            listView1.SelectedItems.Clear();
-            listView1.Items.Add(item);
-            listView1.EnsureVisible(item.Index);
-            item.Selected = true;
-            item.Focused = true;
-            MessageBox.Show(item.SubItems.ToString());
+            new EditUser().Show();
         }
 
         private void ticketbt_Click(object sender, EventArgs e)
@@ -203,30 +171,6 @@ namespace WindowsFormsApplication1
         private void button6_Click_1(object sender, EventArgs e)
         {
             new ViewMonthlyTicket().Show();
-        }
-
-        private void searchUserbt_Click(object sender, EventArgs e)
-        {
-            string text = tbSearch.Text.ToLower();
-            int i = 1;
-            listView1.Items.Clear();
-            foreach (DataRow row in dtRT.Rows)
-            {
-                if (row["Full_Name"].ToString().ToLower().Contains(text) || row["UserName"].ToString().ToLower().Contains(text) ||
-                    row["Address"].ToString().ToLower().Contains(text) || row["Phone"].ToString().ToLower().Contains(text) ||
-                    row["Email"].ToString().ToLower().Contains(text))
-                {
-                    ListViewItem item = new ListViewItem();
-                    item.Text = i.ToString();
-                    item.SubItems.Add(row["Full_Name"].ToString());
-                    item.SubItems.Add(row["UserName"].ToString());
-                    item.SubItems.Add(row["Address"].ToString());
-                    item.SubItems.Add(row["Phone"].ToString());
-                    item.SubItems.Add(row["Email"].ToString());
-                    listView1.Items.Add(item);
-                    i++;
-                }
-            }
         }
 
        

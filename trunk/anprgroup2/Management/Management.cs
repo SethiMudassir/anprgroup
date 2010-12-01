@@ -158,13 +158,14 @@ namespace WindowsFormsApplication1
         private void editUserbt_Click(object sender, EventArgs e)
         {
             //new EditUser().Show();
-            MessageBox.Show(listView1.SelectedItems.GetType().ToString());
+            
             ListViewItem item = new ListViewItem();
             listView1.SelectedItems.Clear();
             listView1.Items.Add(item);
             listView1.EnsureVisible(item.Index);
             item.Selected = true;
             item.Focused = true;
+            MessageBox.Show(item.SubItems.ToString());
         }
 
         private void ticketbt_Click(object sender, EventArgs e)

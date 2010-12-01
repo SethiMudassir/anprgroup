@@ -26,26 +26,66 @@ namespace WindowsFormsApplication1
 
         private void cmdLogin_Click(object sender, EventArgs e)
         {
-            //sqlHelper.sqlHelper.ExecuteQuery;
+
+            Login_Main();
+        }
+
+        private void textBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+                        
+            if (e.KeyCode == Keys.Enter)
+            {
+                Login_Main();
+            }
+            
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdCancel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    Application.Exit();
+        //}
+
+        // Login function code
+
+        private void Login_Main()
+        {  //sqlHelper.sqlHelper.ExecuteQuery;
             DataTable dtDN = sqlHelper.sqlHelper.ExecuteQuery(
                     "check_login",
                     CommandType.StoredProcedure,
-                    "@UsersID", textBoxUserName.Text,
-                    "@Pass", textBoxPassword.Text);
+                    "@Username", textBoxUserName.Text,
+                    "@Password", textBoxPassword.Text);
             if (dtDN.Rows.Count == 0)
             {
-                MessageBox.Show("Đăng nhập lỗi... Kiểm tra lại!", "Cảnh báo");
+                MessageBox.Show("You have entered an invalid UserName or Password.Please try again!", "Error message");
             }
             else
             {
                 this.Hide();
-                DataRow user = dtDN.Rows[0];
+                //DataRow user = dtDN.Rows[0];
                 FrameMain f = new FrameMain();
                 f.getDataLogin(dtDN);
-               // f.SetEnable((bool)user["systemRolle"], (bool)user["ReservationRolle"], (bool)user["resourceRolle"], (bool)user["reportRolle"], (bool)user["ServiceRolle"]);
-                f.Show();
-            }
 
+                // phân quyền
+                //f.SetEnable((bool)user["systemRolle"], (bool)user["ReservationRolle"], (bool)user["resourceRolle"], (bool)user["reportRolle"], (bool)user["ServiceRolle"]);
+
+                f.Show();
+
+            }
         }
     }
 }

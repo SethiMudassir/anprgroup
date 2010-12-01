@@ -195,9 +195,9 @@ namespace WindowsFormsApplication1
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Anpr.Anprclass anpr = new Anpr.Anprclass();
-            anpr.Biensoxe();
-            anpr.Dispose();
+            //Anpr.Anprclass anpr = new Anpr.Anprclass();
+            //anpr.Biensoxe();
+            //anpr.Dispose();
             
         }
 

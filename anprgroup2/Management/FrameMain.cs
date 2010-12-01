@@ -11,6 +11,7 @@ namespace WindowsFormsApplication1
 {
     public partial class FrameMain : Form
     {
+        public static Management frmManagement;
         public FrameMain()
         {
             InitializeComponent();
@@ -27,14 +28,15 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Anpr.Anprclass anpr = new Anpr.Anprclass();
-            anpr.Biensoxe();
+            //Anpr.Anprclass anpr = new Anpr.Anprclass();
+            //anpr.Biensoxe();
             new Parking_Taking().Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new Management().Show();
+            frmManagement = new Management();
+            frmManagement.Show();
         }
 
         private void FrameMain_Load(object sender, EventArgs e)

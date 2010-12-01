@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.ComponentModel;
 using System.Configuration;
 
-namespace sqlHelper
+namespace WindowsFormsApplication1
 {
 
     public class sqlHelper

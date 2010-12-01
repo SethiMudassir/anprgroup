@@ -157,7 +157,14 @@ namespace WindowsFormsApplication1
         //populate Edit Menu
         private void editUserbt_Click(object sender, EventArgs e)
         {
-            new EditUser().Show();
+            //new EditUser().Show();
+            MessageBox.Show(listView1.SelectedItems.GetType().ToString());
+            ListViewItem item = new ListViewItem();
+            listView1.SelectedItems.Clear();
+            listView1.Items.Add(item);
+            listView1.EnsureVisible(item.Index);
+            item.Selected = true;
+            item.Focused = true;
         }
 
         private void ticketbt_Click(object sender, EventArgs e)

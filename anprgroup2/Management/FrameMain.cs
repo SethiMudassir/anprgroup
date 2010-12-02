@@ -12,7 +12,6 @@ namespace WindowsFormsApplication1
     public partial class FrameMain : Form
     {
         public static Management frmManagement;
-        string q;
         public FrameMain()
         {
             InitializeComponent();

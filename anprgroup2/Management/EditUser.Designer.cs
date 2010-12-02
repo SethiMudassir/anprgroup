@@ -29,19 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditUser));
-            this.CloseThis = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbExit = new System.Windows.Forms.Button();
+            this.tbID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btSave = new System.Windows.Forms.Button();
+            this.radioFemale = new System.Windows.Forms.RadioButton();
+            this.tbAddress = new System.Windows.Forms.TextBox();
+            this.tbPhone = new System.Windows.Forms.TextBox();
+            this.tbFullName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btPassReset = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioManager = new System.Windows.Forms.RadioButton();
+            this.radioStaff = new System.Windows.Forms.RadioButton();
+            this.radioMale = new System.Windows.Forms.RadioButton();
+            this.tbUserName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,33 +52,31 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.Email = new System.Windows.Forms.Label();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // CloseThis
+            // tbExit
             // 
-            this.CloseThis.Image = ((System.Drawing.Image)(resources.GetObject("CloseThis.Image")));
-            this.CloseThis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CloseThis.Location = new System.Drawing.Point(202, 239);
-            this.CloseThis.Name = "CloseThis";
-            this.CloseThis.Size = new System.Drawing.Size(74, 23);
-            this.CloseThis.TabIndex = 3;
-            this.CloseThis.Text = "Exit";
-            this.CloseThis.UseVisualStyleBackColor = true;
-            this.CloseThis.Click += new System.EventHandler(this.CloseThis_Click);
+            this.tbExit.Image = ((System.Drawing.Image)(resources.GetObject("tbExit.Image")));
+            this.tbExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbExit.Location = new System.Drawing.Point(200, 268);
+            this.tbExit.Name = "tbExit";
+            this.tbExit.Size = new System.Drawing.Size(74, 23);
+            this.tbExit.TabIndex = 3;
+            this.tbExit.Text = "Exit";
+            this.tbExit.UseVisualStyleBackColor = true;
+            this.tbExit.Click += new System.EventHandler(this.CloseThis_Click);
             // 
-            // textBox7
+            // tbID
             // 
-            this.textBox7.Location = new System.Drawing.Point(100, 201);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(154, 20);
-            this.textBox7.TabIndex = 23;
-            this.textBox7.Text = "0123422133";
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.tbID.Location = new System.Drawing.Point(100, 201);
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(154, 20);
+            this.tbID.TabIndex = 23;
+            this.tbID.Text = "0123422133";
             // 
             // label8
             // 
@@ -86,83 +87,70 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "ID Number";
             // 
-            // button4
+            // btSave
             // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(85, 239);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "Save";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btSave.Image = ((System.Drawing.Image)(resources.GetObject("btSave.Image")));
+            this.btSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSave.Location = new System.Drawing.Point(69, 268);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(75, 23);
+            this.btSave.TabIndex = 21;
+            this.btSave.Text = "Save";
+            this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
-            // radioButton2
+            // radioFemale
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(161, 122);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 17);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioFemale.AutoSize = true;
+            this.radioFemale.Location = new System.Drawing.Point(161, 122);
+            this.radioFemale.Name = "radioFemale";
+            this.radioFemale.Size = new System.Drawing.Size(59, 17);
+            this.radioFemale.TabIndex = 15;
+            this.radioFemale.TabStop = true;
+            this.radioFemale.Text = "Female";
+            this.radioFemale.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // tbAddress
             // 
-            this.textBox6.Location = new System.Drawing.Point(100, 144);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(154, 20);
-            this.textBox6.TabIndex = 12;
-            this.textBox6.Text = "12/1/1985";
+            this.tbAddress.Location = new System.Drawing.Point(100, 173);
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Size = new System.Drawing.Size(245, 20);
+            this.tbAddress.TabIndex = 11;
+            this.tbAddress.Text = "18 Hoàng Hoa Thám, Hà Nội";
             // 
-            // textBox5
+            // tbPhone
             // 
-            this.textBox5.Location = new System.Drawing.Point(100, 173);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(245, 20);
-            this.textBox5.TabIndex = 11;
-            this.textBox5.Text = "18 Hoàng Hoa Thám, Hà Nội";
+            this.tbPhone.Location = new System.Drawing.Point(100, 98);
+            this.tbPhone.Name = "tbPhone";
+            this.tbPhone.Size = new System.Drawing.Size(154, 20);
+            this.tbPhone.TabIndex = 10;
+            this.tbPhone.Text = "0912348585";
             // 
-            // textBox4
+            // tbFullName
             // 
-            this.textBox4.Location = new System.Drawing.Point(100, 98);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 20);
-            this.textBox4.TabIndex = 10;
-            this.textBox4.Text = "0912348585";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(100, 72);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(154, 20);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.Text = "1232323";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(100, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 20);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.Text = "Hồ Xuân Trường";
+            this.tbFullName.Location = new System.Drawing.Point(100, 46);
+            this.tbFullName.Name = "tbFullName";
+            this.tbFullName.Size = new System.Drawing.Size(154, 20);
+            this.tbFullName.TabIndex = 8;
+            this.tbFullName.Text = "Hồ Xuân Trường";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tbEmail);
+            this.groupBox1.Controls.Add(this.Email);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.btPassReset);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.CloseThis);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.radioMale);
+            this.groupBox1.Controls.Add(this.tbExit);
+            this.groupBox1.Controls.Add(this.tbID);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.btSave);
+            this.groupBox1.Controls.Add(this.radioFemale);
+            this.groupBox1.Controls.Add(this.tbAddress);
+            this.groupBox1.Controls.Add(this.tbPhone);
+            this.groupBox1.Controls.Add(this.tbFullName);
+            this.groupBox1.Controls.Add(this.tbUserName);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -172,29 +160,78 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(26, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(383, 280);
+            this.groupBox1.Size = new System.Drawing.Size(399, 297);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User Information";
             // 
-            // radioButton1
+            // dateTimePicker1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(96, 122);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(48, 17);
-            this.radioButton1.TabIndex = 24;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.dateTimePicker1.Location = new System.Drawing.Point(100, 140);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 27;
             // 
-            // textBox1
+            // btPassReset
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 20);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "TruongHX";
+            this.btPassReset.Location = new System.Drawing.Point(100, 70);
+            this.btPassReset.Name = "btPassReset";
+            this.btPassReset.Size = new System.Drawing.Size(75, 23);
+            this.btPassReset.TabIndex = 26;
+            this.btPassReset.Text = "Reset";
+            this.btPassReset.UseVisualStyleBackColor = true;
+            this.btPassReset.Click += new System.EventHandler(this.btPassReset_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioManager);
+            this.groupBox2.Controls.Add(this.radioStaff);
+            this.groupBox2.Location = new System.Drawing.Point(291, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(86, 114);
+            this.groupBox2.TabIndex = 25;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Role";
+            // 
+            // radioManager
+            // 
+            this.radioManager.AutoSize = true;
+            this.radioManager.Location = new System.Drawing.Point(7, 57);
+            this.radioManager.Name = "radioManager";
+            this.radioManager.Size = new System.Drawing.Size(67, 17);
+            this.radioManager.TabIndex = 1;
+            this.radioManager.TabStop = true;
+            this.radioManager.Text = "Manager";
+            this.radioManager.UseVisualStyleBackColor = true;
+            // 
+            // radioStaff
+            // 
+            this.radioStaff.AutoSize = true;
+            this.radioStaff.Location = new System.Drawing.Point(7, 27);
+            this.radioStaff.Name = "radioStaff";
+            this.radioStaff.Size = new System.Drawing.Size(47, 17);
+            this.radioStaff.TabIndex = 0;
+            this.radioStaff.TabStop = true;
+            this.radioStaff.Text = "Staff";
+            this.radioStaff.UseVisualStyleBackColor = true;
+            // 
+            // radioMale
+            // 
+            this.radioMale.AutoSize = true;
+            this.radioMale.Location = new System.Drawing.Point(96, 122);
+            this.radioMale.Name = "radioMale";
+            this.radioMale.Size = new System.Drawing.Size(48, 17);
+            this.radioMale.TabIndex = 24;
+            this.radioMale.TabStop = true;
+            this.radioMale.Text = "Male";
+            this.radioMale.UseVisualStyleBackColor = true;
+            // 
+            // tbUserName
+            // 
+            this.tbUserName.Location = new System.Drawing.Point(100, 21);
+            this.tbUserName.Name = "tbUserName";
+            this.tbUserName.Size = new System.Drawing.Size(154, 20);
+            this.tbUserName.TabIndex = 7;
             // 
             // label7
             // 
@@ -259,38 +296,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "User Name";
             // 
-            // groupBox2
+            // Email
             // 
-            this.groupBox2.Controls.Add(this.radioButton4);
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Location = new System.Drawing.Point(291, 19);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(65, 114);
-            this.groupBox2.TabIndex = 25;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.Email.AutoSize = true;
+            this.Email.Location = new System.Drawing.Point(25, 240);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(32, 13);
+            this.Email.TabIndex = 28;
+            this.Email.Text = "Email";
             // 
-            // radioButton3
+            // tbEmail
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(7, 27);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 0;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(7, 57);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(85, 17);
-            this.radioButton4.TabIndex = 1;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.tbEmail.Location = new System.Drawing.Point(100, 232);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(200, 20);
+            this.tbEmail.TabIndex = 29;
             // 
             // EditUser
             // 
@@ -311,18 +331,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Button CloseThis;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button tbExit;
+        private System.Windows.Forms.TextBox tbID;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btSave;
+        private System.Windows.Forms.RadioButton radioFemale;
+        private System.Windows.Forms.TextBox tbAddress;
+        private System.Windows.Forms.TextBox tbPhone;
+        private System.Windows.Forms.TextBox tbFullName;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbUserName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -330,9 +348,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioMale;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioManager;
+        private System.Windows.Forms.RadioButton radioStaff;
+        private System.Windows.Forms.Button btPassReset;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.Label Email;
     }
 }

@@ -142,7 +142,6 @@ namespace WindowsFormsApplication1
                       
             bool isStrictMatch = reStrict.IsMatch(emailAddress);
             return isStrictMatch;
-
         }
 
         //Save to database

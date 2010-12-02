@@ -106,6 +106,12 @@
     <Compile Include="FrameMain.designer.cs">
       <DependentUpon>FrameMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportDailly.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrameMain.resx">
       <DependentUpon>FrameMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management.resx">
       <DependentUpon>Management.cs</DependentUpon>
@@ -278,7 +287,7 @@
     <Compile Include="UpdateMTicket.Designer.cs">
       <DependentUpon>UpdateMTicket.cs</DependentUpon>
     </Compile>
-    <Compile Include="ValidateUser.cs" />
+    <Compile Include="Staff.cs" />
     <Compile Include="ViewMonthlyTicket.cs">
       <SubType>Form</SubType>
     </Compile>
